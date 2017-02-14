@@ -9,7 +9,7 @@ Let’s define a function `lookAndSay` as follow: read off the digits of the inp
 When the define a “Look and Say” sequence as repeatedly called the “Look and Say” function on its output.
 Given a number `start` and number of iteration `n`, *calculate* the nth number in a “Look and Say” sequence starting with `start`.
 
-Reusing the previous example with start = 11 and n = 2, `lookAndSay(lookAndSay(11)) = 1211`.
+Reusing the previous example with start = 11 and n = 2, `LookAndSay(11,2)` would be the same as `lookAndSay(lookAndSay(11)) = 1211`.
 
 Since this sequence grows quickly we will use a string representation for the number in sequence to avoid number overflow.
 
