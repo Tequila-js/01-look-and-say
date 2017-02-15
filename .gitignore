@@ -1,7 +1,3 @@
 .DS_Store
-dist
-
-# Dependency
 node_modules
-
 npm-debug.log
