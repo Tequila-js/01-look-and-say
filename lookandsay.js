@@ -19,8 +19,7 @@ function lookAndSayUnary(num) {
     last = curr;
   };
   while (isNumberNonEmpty(num)) {
-    destr = getLastDigit(num);
-    curr = destr[0]; num = destr[1];
+    [curr,num] = getLastDigit(num);
     if (last === undefined) last = curr;
     if (curr != last) add();
     else count++;
