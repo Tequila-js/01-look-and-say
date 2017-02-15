@@ -6,7 +6,7 @@ const fixture = [
     { start: 11,  n:1,  result:'21' },
     { start: 111221,  n:1,  result:'312211' },
     { start: 11, n:2, result:'1211' },
-    { start: 111333221, n:2, result:'31332211' },
+    { start: 111333221, n:1, result:'31332211' },
 ]
 
 fixture.map(({ start, n, result }) => {
