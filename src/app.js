@@ -7,20 +7,20 @@ function lookAndSay(start, n) {
 function look(start) {
     const ary = start.toString().split("");
 
-    const groupByDigit = ary.reduce((acc, item) => {
-       const previousGroup = acc[acc.length-1] || false;
+    const groupByDigit = ary.reduce((group, digit) => {
+       const previousGroup = group[group.length-1] || false;
 
-       if(!previousGroup.hasOwnProperty(item)) {
-           return acc.concat({ [item]: 1 });
+       if(!previousGroup.hasOwnProperty(digit)) {
+           return group.concat({ [digit]: 1 });
        }
 
-       return acc.slice(0,-1).concat({
-           [item]: previousGroup[item] + 1
+       return group.slice(0,-1).concat({
+           [digit]: previousGroup[digit] + 1
        });
     }, []);
 
-    return groupByDigit.reduce((acc, item) => {
-        const [key, value] = Object.entries(item)[0];
+    return groupByDigit.reduce((acc, group) => {
+        const [key, value] = Object.entries(group)[0];
         return acc + value + key;
     }, "");
 }
