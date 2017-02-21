@@ -3,7 +3,7 @@
  */
 function lookAndSay(number,times = 1){
     let result = number.toString();
-    const reducer = (acc,element) => {
+    const groupByDigit = (acc,element) => {
         let i = acc.length-1;
         if(i>=0 && acc[i] && acc[i][0] === element){
             acc[i].push(element);
@@ -14,7 +14,7 @@ function lookAndSay(number,times = 1){
     }
     const counter = element => '' + element.length + element.pop();
     while(times-- >= 1){
-        result = result.split('').reduce(reducer,[]).map(counter).join('');
+        result = result.split('').reduce(groupByDigit,[]).map(counter).join('');
     }
     return result;
 }
