@@ -12,7 +12,7 @@ function lookAndSay(number,times = 1){
         }
         return acc;
     }
-    const counter = element => '' + element.length + element[0];
+    const counter = element => '' + element.length + element.pop();
     while(times-- >= 1){
         result = result.split('').reduce(reducer,[]).map(counter).join('');
     }
